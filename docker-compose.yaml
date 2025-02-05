@@ -8,6 +8,8 @@ services:
     container_name: watchtower
   express-app:
     image: hovhanneshovakimyan/express-app
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
     ports:
       - 8080:8080
     container_name: express-app
